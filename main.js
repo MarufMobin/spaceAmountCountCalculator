@@ -21,7 +21,9 @@ function handleQuentity(planet, oparator){
     document.getElementById( planet + "-quantity").value = quantity;
  
     calculateJourney(planet);
+
     totalAmount();
+    
 }
 
 function calculateJourney(planet){
