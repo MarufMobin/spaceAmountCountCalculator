@@ -40,3 +40,21 @@ function calculateJourney(planet){
     }
 
 }
+
+
+function updateUI( planet, total ){
+    const planetTotal = document.getElementById(`${planet}-total`);
+    planetTotal.innerText = total;
+}
+
+function totalAmount(){
+    const marsQuantityInput = document.getElementById( 'mars-total').innerText;
+    let marsQuantity = parseInt(marsQuantityInput);
+
+    const moonQuantityInput = document.getElementById( 'moon-total').innerText;
+    let moonQuantity = parseInt(moonQuantityInput);
+
+    const totalQuantityInput = document.getElementById('total');   
+
+    totalQuantityInput.innerText = marsQuantity + moonQuantity;
+}
