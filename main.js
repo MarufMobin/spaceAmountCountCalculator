@@ -23,3 +23,20 @@ function handleQuentity(planet, oparator){
     calculateJourney(planet);
     totalAmount();
 }
+
+function calculateJourney(planet){
+
+    const quantityInput = document.getElementById( planet + "-quantity").value;
+
+    const quantity = parseInt(quantityInput);
+    
+    if( planet === "mars" ){
+       const marsTotal = marseCost * quantity;
+       updateUI(planet,marsTotal);
+    }
+    else{
+        const moonTotal = moonCost * quantity;
+        updateUI(planet,moonTotal);
+    }
+
+}
